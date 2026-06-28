@@ -1,6 +1,6 @@
 // CONFIGURATION: Enter your actual business WhatsApp number below
 // Must include country code, but NO spaces, NO brackets, and NO plus (+) symbol.
-const BUSINESS_PHONE = "910000000000"; 
+const BUSINESS_PHONE = "+91 8910287531"; 
 
 // 1. Handles retail catalog inquiries 
 function orderSpice(spiceName) {
