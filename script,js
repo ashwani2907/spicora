@@ -1,19 +1,25 @@
-// Wait for the HTML elements to load
-document.addEventListener('DOMContentLoaded', () => {
-    const button = document.getElementById('magicButton');
-    const message = document.getElementById('magicMessage');
+// CONFIGURATION: Enter your actual business WhatsApp number below
+// Must include country code, but NO spaces, NO brackets, and NO plus (+) symbol.
+const BUSINESS_PHONE = "910000000000"; 
 
-    // Add a click event to the button
-    button.addEventListener('click', () => {
-        // Toggle the message display
-        if (message.classList.contains('hidden')) {
-            message.classList.remove('hidden');
-            message.classList.add('visible');
-            button.textContent = "Hide Magic";
-        } else {
-            message.classList.remove('visible');
-            message.classList.add('hidden');
-            button.textContent = "Click for Magic!";
-        }
-    });
-});
+// 1. Handles retail catalog inquiries 
+function orderSpice(spiceName) {
+    const baseMessage = `Hello Spicora Team! I am visiting your website and would like to check availability and place a premium order for: Whole ${spiceName}. Please share packaging options and pricing.`;
+    
+    executeWhatsApp(baseMessage);
+}
+
+// 2. Handles B2B Wholesale requests
+function bulkInquiry() {
+    const bulkMessage = `Hello Spicora Commercial Team, I am interested in your wholesale capabilities. Please provide your latest FOB/Ex-Works bulk catalog and minimum order quantity (MOQ) breakdown.`;
+    
+    executeWhatsApp(bulkMessage);
+}
+
+// Helper engine to route safely to WhatsApp
+function executeWhatsApp(textPayload) {
+    const encodedText = encodeURIComponent(textPayload);
+    const destinationUrl = `https://wa.me/${BUSINESS_PHONE}?text=${encodedText}`;
+    
+    window.open(destinationUrl, '_blank');
+}
