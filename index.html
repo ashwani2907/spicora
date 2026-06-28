@@ -3,29 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Free GitHub Website</title>
+    <title>Spicora | Premium Whole Spices & Herbs</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Header / Navigation -->
     <header>
-        <h1>Spicora</h1>
-        <p>Spicing Up Life, Naturally.</p>
+        <div class="logo">✨ SPICORA</div>
+        <p class="tagline">The Essence of Pure Aroma</p>
     </header>
 
-    <main>
-        <section class="content">
-            <h2>About This Project</h2>
-            <p>I built this website using HTML, CSS, and JavaScript, and deployed it using GitHub.</p>
-            <button id="magicButton">Click for Magic!</button>
-            <p id="magicMessage" class="hidden">✨ Success! Your code works perfectly! ✨</p>
-        </section>
+    <!-- Hero Showcase Section -->
+    <section class="hero">
+        <h2>Handpicked. Unadulterated. Authentic.</h2>
+        <p>From the world's finest spice gardens straight to your kitchen. Discover premium whole spices with unmatched potency and essential oils.</p>
+        <a href="#catalog" class="cta-btn">Explore Our Catalog</a>
+    </section>
+
+    <!-- Brand Value Pillars -->
+    <section class="pillars">
+        <div class="pillar">
+            <h3>🌱 100% Pure</h3>
+            <p>No artificial colors, preservatives, or added dust. Just raw nature.</p>
+        </div>
+        <div class="pillar">
+            <h3>🍂 Ethically Sourced</h3>
+            <p>Directly from trusted farmers ensuring sustainable agriculture.</p>
+        </div>
+        <div class="pillar">
+            <h3>🔬 Triple-Graded</h3>
+            <p>Rigorous quality checks for uniform size, moisture control, and rich aroma.</p>
+        </div>
+    </section>
+
+    <!-- Main Product Catalog -->
+    <main id="catalog">
+        <h2 class="section-title">Our Whole Spice Collection</h2>
+        <p class="section-subtitle">Available for Retail & Bulk Wholesale Orders</p>
+        
+        <div class="product-grid">
+            <!-- Item 1 -->
+            <div class="product-card">
+                <div class="spice-tag">Premium Bold</div>
+                <div class="product-icon">🌱</div>
+                <h3>Green Cardamom</h3>
+                <p>Hand-sorted, intensive green 8mm+ pods packed with rich essential oils.</p>
+                <button class="order-btn" onclick="orderSpice('Green Cardamom')">Inquire via WhatsApp</button>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="product-card">
+                <div class="spice-tag">Organically Grown</div>
+                <div class="product-icon">🍂</div>
+                <h3>Ceylon Cinnamon</h3>
+                <p>Delicate, multi-layered real cinnamon quills offering sweet, subtle notes.</p>
+                <button class="order-btn" onclick="orderSpice('Ceylon Cinnamon')">Inquire via WhatsApp</button>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="product-card">
+                <div class="spice-tag">High Piperine</div>
+                <div class="product-icon">⚫</div>
+                <h3>Tellicherry Black Pepper</h3>
+                <p>King of spices. Large, bold peppercorns delivering sharp, fruity pungency.</p>
+                <button class="order-btn" onclick="orderSpice('Tellicherry Black Pepper')">Inquire via WhatsApp</button>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="product-card">
+                <div class="spice-tag">Whole Selected</div>
+                <div class="product-icon">⭐</div>
+                <h3>Star Anise</h3>
+                <p>Perfectly preserved, unbroken star-shaped pods rich in fragrant anethole.</p>
+                <button class="order-btn" onclick="orderSpice('Star Anise')">Inquire via WhatsApp</button>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="product-card">
+                <div class="spice-tag">Deep Red</div>
+                <div class="product-icon">🌶️</div>
+                <h3>Kashmiri Chillies</h3>
+                <p>Vibrant crimson whole pods giving brilliant color with mild, manageable heat.</p>
+                <button class="order-btn" onclick="orderSpice('Kashmiri Chillies')">Inquire via WhatsApp</button>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="product-card">
+                <div class="spice-tag">Aromatic</div>
+                <div class="product-icon">🟤</div>
+                <h3>Whole Cloves</h3>
+                <p>Fully matured, hand-picked flower buds bursting with highly therapeutic eugenol.</p>
+                <button class="order-btn" onclick="orderSpice('Whole Cloves')">Inquire via WhatsApp</button>
+            </div>
+        </div>
     </main>
 
+    <!-- Bulk Wholesale Contact Module -->
+    <section class="wholesale-section">
+        <h2>Wholesale & Bulk B2B Supply</h2>
+        <p>Are you an exporter, restaurant chain, or grocery retailer? Spicora offers custom packaging, competitive commercial pricing, and worldwide logistics.</p>
+        <button class="wholesale-btn" onclick="bulkInquiry()">Request Wholesale Price List</button>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2026 My GitHub Website</p>
+        <p><strong>SPICORA SPICES TRADING</strong></p>
+        <p>📍 Global Sourcing & Distribution | ✉️ sales@spicora.com</p>
+        <p>© 2026 Spicora. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html>create index.html
+</html>
