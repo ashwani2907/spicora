@@ -1,77 +1,241 @@
-/* General Layout */
+/* Premium Spicora Design Layout */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    font-family: 'Times New Roman', Times, Georgia, serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background-color: #fdfaf6;
+    color: #2b1810;
 }
 
 header {
-    background-color: #24292e;
+    background-color: #4a1204; /* Deep Premium Maroon */
+    color: #dfb15b; /* Elegant Rich Gold */
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom: 3px solid #dfb15b;
+}
+
+header .logo {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+header .tagline {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #f5e6cc;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+.hero {
+    background: linear-gradient(rgba(74, 18, 4, 0.85), rgba(43, 11, 2, 0.9)), url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=1000') center/cover no-repeat;
     color: #fff;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 5rem 1.5rem;
 }
 
-main {
-    flex: 1;
+.hero h2 {
+    font-size: 2.5rem;
+    color: #dfb15b;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-family: sans-serif;
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+    line-height: 1.6;
+    color: #ebdcd0;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: #dfb15b;
+    color: #4a1204;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Value Pillars */
+.pillars {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-.content {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1100px;
+    margin: -30px auto 4rem auto;
     background: #fff;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    text-align: center;
-    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-radius: 4px;
 }
 
-/* Button & Interactive styles */
-button {
-    background-color: #2ea44f;
+.pillar {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.pillar h3 {
+    color: #4a1204;
+    margin-bottom: 8px;
+}
+
+.pillar p {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Grid Layout */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #4a1204;
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-family: sans-serif;
+    color: #888;
+    margin-bottom: 3rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #f0e6df;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    position: relative;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(74,18,4,0.1);
+}
+
+.spice-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #f7ede2;
+    color: #a06040;
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.product-icon {
+    font-size: 3.5rem;
+    margin: 15px 0 10px 0;
+}
+
+.product-card h3 {
+    color: #4a1204;
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    min-height: 60px;
+}
+
+/* Operational Buttons */
+.order-btn {
+    background-color: #25d366;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 6px;
+    padding: 12px;
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 4px;
     cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
     transition: background 0.2s;
 }
 
-button:hover {
-    background-color: #2c974b;
+.order-btn:hover {
+    background-color: #128c7e;
 }
 
-.hidden {
-    display: none;
+/* Wholesale Callout block */
+.wholesale-section {
+    background-color: #f0e5da;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    margin-top: 5rem;
+    border-top: 1px solid #e3d2c4;
 }
 
-.visible {
-    display: block;
-    color: #2ea44f;
+.wholesale-section h2 {
+    color: #4a1204;
+    font-size: 2rem;
+}
+
+.wholesale-section p {
+    font-family: sans-serif;
+    max-width: 650px;
+    margin: 10px auto 25px auto;
+    color: #4a3b32;
+    line-height: 1.6;
+}
+
+.wholesale-btn {
+    background-color: #4a1204;
+    color: #dfb15b;
+    border: none;
+    padding: 14px 35px;
+    font-family: sans-serif;
+    font-size: 1rem;
     font-weight: bold;
-    margin-top: 15px;
-    animation: fadeIn 0.5s ease-in;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.2s;
+}
+
+.wholesale-btn:hover {
+    background-color: #2b1102;
 }
 
 footer {
-    background-color: #24292e;
-    color: #fff;
+    background-color: #1a0601;
+    color: #ebdcd0;
     text-align: center;
-    padding: 1rem;
+    padding: 3rem 1.5rem;
+    font-family: sans-serif;
     font-size: 0.9rem;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
